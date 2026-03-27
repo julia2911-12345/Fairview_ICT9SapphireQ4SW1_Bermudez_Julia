@@ -1,1 +1,99 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 1</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+        body {
+            background-color: #e9f0f7;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .container {
+            margin-top: 100px;
+            width: 320px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        #instructions {
+            color: #007bff;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+<div class="container">
+    		<h1>Login Page</h1>
+    	<p>Enter your login details.</p>
+
+  		  <!-- Checkbox for instructions -->
+    <input type="checkbox" id="checkboxID" onclick="function_name_here()">
+    Show Instructions
+
+  		  <p id="instructions"></p>
+
+    <!-- Login -->
+    <input type="text" id="username" class="form-control mb-2" placeholder="Username">
+   		 <input type="password" id="password" class="form-control mb-2" placeholder="Password">
+
+  		  <button class="btn btn-primary" onclick="login()">Login</button>
+
+    <p><a href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DAndroid" target="_blank">Forgot username / password?</a></p>
+</div>
+
+<script>
+  		  // Correct credentials
+    let correctUser = "admin";
+    let correctPass = "1234";
+
+   		 function login() {
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+
+        if (user === correctUser && pass === correctPass) {
+            window.alert("Login Successful");
+        } else {
+            window.alert("Wrong Username or Password");
+        }
+    }
+
+    function function_name_here() {
+        let variable_name = document.getElementById("checkboxID").checked;
+
+      		  switch(variable_name) {
+            case true:
+                document.getElementById("instructions").innerHTML =
+                "Enter the correct username and password to login.";
+            break;
+
+            case false:
+                document.getElementById("instructions").innerHTML = "";
+            break;
+        }
+    }
+</script>
+
+
+</body>
+</html>
