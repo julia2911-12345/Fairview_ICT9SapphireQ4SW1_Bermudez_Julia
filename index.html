@@ -48,7 +48,7 @@
     	<p>Enter your login details.</p>
 
   		  <!-- Checkbox for instructions -->
-    <input type="checkbox" id="checkboxID" onclick="function_name_here()">
+    <input type="checkbox" id="checkboxID" onclick="instructions()">
     Show Instructions
 
   		  <p id="instructions"></p>
@@ -78,7 +78,7 @@
         }
     }
 
-    function function_name_here() {
+    function instructions() {
         let variable_name = document.getElementById("checkboxID").checked;
 
       		  switch(variable_name) {
