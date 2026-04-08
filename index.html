@@ -79,9 +79,9 @@
     }
 
     function instructions() {
-        let variable_name = document.getElementById("checkboxID").checked;
+        let checkbox = document.getElementById("checkboxID").checked;
 
-      		  switch(variable_name) {
+      		  switch(checkbox) {
             case true:
                 document.getElementById("instructions").innerHTML =
                 "Enter the correct username and password to login.";
@@ -91,6 +91,8 @@
                 document.getElementById("instructions").innerHTML = "";
             break;
         }
+
+
     }
 </script>
 
